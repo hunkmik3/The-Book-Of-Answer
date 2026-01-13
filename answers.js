@@ -1,8 +1,8 @@
-// 200 Thông Điệp Từ Vị Thần
-// 50 thông điệp gốc + 150 thông điệp từ cuốn sách
+// 178 Thông Điệp Từ Vị Thần
+// 28 thông điệp gốc + 150 thông điệp từ cuốn sách
 const answers = [
     // ============================================
-    // 50 THÔNG ĐIỆP GỐC (1-50)
+    // 28 THÔNG ĐIỆP GỐC
     // ============================================
 
     // Về Tin Tưởng Bản Thân
@@ -27,26 +27,6 @@ const answers = [
     "Mùa đông rồi sẽ qua, và mùa xuân sẽ đến. Hãy kiên nhẫn với chu kỳ của cuộc sống.",
     "Sự chuyển hóa đòi hỏi sự can đảm, nhưng phần thưởng sẽ xứng đáng với nỗi đau.",
 
-    // Về Tình Yêu & Mối Quan Hệ
-    "Tình yêu đang tìm đường đến với bạn. Hãy mở cửa trái tim.",
-    "Hãy yêu thương bản thân trước. Đó là nền tảng cho mọi mối quan hệ khác.",
-    "Người phù hợp sẽ xuất hiện khi bạn sẵn sàng, không phải khi bạn cô đơn.",
-    "Hãy cho đi tình yêu mà không mong chờ. Vũ trụ sẽ trả lại cho bạn gấp bội.",
-    "Hãy tha thứ - không phải vì họ xứng đáng, mà vì bạn xứng đáng được bình yên.",
-    "Tình yêu thật sự không hoàn hảo, nhưng nó chân thật. Hãy trân trọng điều đó.",
-    "Người bạn đang nghĩ đến cũng đang nghĩ về bạn. Hãy tin vào sự kết nối này.",
-
-    // Về Công Việc & Sự Nghiệp
-    "Đam mê của bạn là la bàn. Hãy theo đuổi điều khiến trái tim bạn cháy bỏng.",
-    "Thành công không đến từ một đêm, mà từ hàng ngàn đêm kiên trì.",
-    "Cơ hội đang gõ cửa. Hãy mở mắt và sẵn sàng đón nhận.",
-    "Thất bại không phải là kết thúc - đó là bài học được ngụy trang.",
-    "Đừng so sánh hành trình của bạn với người khác. Mỗi người có một con đường riêng.",
-    "Hãy dám mơ lớn, nhưng bắt đầu từ những bước nhỏ. Mọi tòa nhà đều bắt đầu từ viên gạch đầu tiên.",
-    "Sự sáng tạo của bạn là món quà. Đừng giấu nó đi mà hãy chia sẻ với thế giới.",
-    "Hãy tin vào ý tưởng của mình. Nó có thể thay đổi cuộc sống của bạn và của nhiều người khác.",
-    "Bạn được sinh ra để làm điều phi thường. Đừng bằng lòng với sự tầm thường.",
-
     // Về Thời Điểm & Sự Kiên Nhẫn
     "Vũ trụ có lịch trình riêng. Đừng cố ép buộc những gì chưa sẵn sàng.",
     "Hãy chờ đợi với niềm tin, không phải với sự lo lắng. Kết quả sẽ khác nhau hoàn toàn.",
@@ -61,16 +41,8 @@ const answers = [
     "Trực giác của bạn đã có câu trả lời. Đừng để nỗi sợ che mờ nó.",
     "Con đường ít người đi thường dẫn đến những điều phi thường nhất.",
 
-    // Về Chữa Lành & Bình Yên
-    "Hãy cho phép bản thân được chữa lành. Vết thương cũ không định nghĩa tương lai của bạn.",
-    "Hãy buông bỏ những điều ngoài tầm kiểm soát. Năng lượng của bạn quý giá hơn thế.",
-    "Thế giới bên ngoài là phản chiếu của thế giới bên trong. Hãy bắt đầu chữa lành từ bên trong.",
-    "Hãy tha thứ cho bản thân về những sai lầm trong quá khứ. Bạn đã làm tốt nhất có thể với những gì bạn biết.",
-    "Những gì bạn đang trải qua sẽ qua đi. Không có bão tố nào kéo dài mãi mãi.",
-    "Hãy nhớ rằng: Mọi chuyện đều là tất nhiên, và bạn đang được bảo vệ trên hành trình này.",
-
     // ============================================
-    // 150 THÔNG ĐIỆP TỪ CUỐN SÁCH (51-200)
+    // 150 THÔNG ĐIỆP TỪ CUỐN SÁCH
     // ============================================
 
     "Có thể xảy ra.",
