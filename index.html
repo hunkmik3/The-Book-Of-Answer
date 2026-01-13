@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vị Thần Của Những Quyết Định - Lắng nghe trực giác, kết nối vũ trụ và tìm câu trả lời cho những quyết định trong cuộc sống">
+    <meta name="keywords" content="vị thần, quyết định, trực giác, tâm linh, vũ trụ, self-help">
+    <title>Vị Thần Của Những Quyết Định</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles" id="particles"></div>
+    
+    <!-- Stage 1: Book Cover -->
+    <section class="stage stage-cover active" id="stageCover">
+        <div class="book-container">
+            <div class="book" id="book">
+                <div class="book-spine"></div>
+                <div class="book-cover">
+                    <div class="cover-ornament top-left"></div>
+                    <div class="cover-ornament top-right"></div>
+                    <div class="cover-ornament bottom-left"></div>
+                    <div class="cover-ornament bottom-right"></div>
+                    <div class="cover-content">
+                        <div class="cover-symbol">✧</div>
+                        <h1 class="cover-title">Vị Thần<br>Của Những<br>Quyết Định</h1>
+                        <div class="cover-divider">
+                            <span class="divider-star">★</span>
+                        </div>
+                        <p class="cover-subtitle">Không có gì là ngẫu nhiên<br>Mọi chuyện đều là tất nhiên</p>
+                    </div>
+                    <div class="cover-glow"></div>
+                </div>
+            </div>
+        </div>
+        <p class="hint-text">Chạm vào cuốn sách để mở</p>
+    </section>
+
+    <!-- Stage 2: Instruction -->
+    <section class="stage stage-instruction" id="stageInstruction">
+        <div class="instruction-container">
+            <div class="mystical-circle">
+                <div class="circle-ring ring-1"></div>
+                <div class="circle-ring ring-2"></div>
+                <div class="circle-ring ring-3"></div>
+                <div class="eye-symbol">
+                    <svg viewBox="0 0 100 60" class="eye-svg">
+                        <ellipse cx="50" cy="30" rx="45" ry="25" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="50" cy="30" r="15" fill="currentColor"/>
+                        <circle cx="50" cy="30" r="8" fill="#0a0a1a"/>
+                        <circle cx="45" cy="26" r="3" fill="rgba(255,255,255,0.8)"/>
+                    </svg>
+                </div>
+            </div>
+            <h2 class="instruction-title">Lắng Nghe Trực Giác</h2>
+            <div class="instruction-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <p>Nhắm mắt lại và hít thở sâu</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <p>Tập trung vào câu hỏi trong tâm trí bạn</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <p>Khi sẵn sàng, chạm vào màn hình để nhận thông điệp</p>
+                </div>
+            </div>
+            <button class="reveal-btn" id="revealBtn">
+                <span class="btn-text">Nhận Câu Trả Lời</span>
+                <span class="btn-glow"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Stage 3: Answer -->
+    <section class="stage stage-answer" id="stageAnswer">
+        <div class="answer-container">
+            <div class="answer-card">
+                <div class="card-ornament top"></div>
+                <div class="card-ornament bottom"></div>
+                <div class="answer-symbol">☽</div>
+                <blockquote class="answer-text" id="answerText">
+                    <!-- Answer will be inserted here -->
+                </blockquote>
+                <div class="answer-number" id="answerNumber">#1</div>
+            </div>
+            <button class="ask-again-btn" id="askAgainBtn">
+                <span>Hỏi Lại Vị Thần</span>
+            </button>
+            <button class="start-over-btn" id="startOverBtn">
+                <span>Quay Về Trang Đầu</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sound Toggle -->
+    <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+        <svg class="sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        <svg class="sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+    </button>
+
+    <script src="answers.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
