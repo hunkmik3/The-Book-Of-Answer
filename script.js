@@ -20,54 +20,29 @@ let isMuted = false;
 let usedAnswers = [];
 
 // ============================================
-// Audio (Optional ambient sounds)
+// Audio - Using MP3 Files
 // ============================================
-const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+const bookOpenSound = new Audio('ES_Short-Riser-Dramatic-Epidemic-Sound.mp3');
+const revealSound = new Audio('ES_Game-Jingle-Chime-Positive-02-Epidemic-Sound.mp3');
+
+// Preload audio
+bookOpenSound.preload = 'auto';
+revealSound.preload = 'auto';
 
 function playMagicSound() {
     if (isMuted) return;
 
-    const oscillator = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-
-    oscillator.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-
-    oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
-    oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.3);
-
-    gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
-
-    oscillator.start(audioContext.currentTime);
-    oscillator.stop(audioContext.currentTime + 0.5);
+    // Reset and play the book opening sound
+    bookOpenSound.currentTime = 0;
+    bookOpenSound.play().catch(err => console.log('Audio play failed:', err));
 }
 
 function playRevealSound() {
     if (isMuted) return;
 
-    // Create a more mystical sound
-    const oscillator1 = audioContext.createOscillator();
-    const oscillator2 = audioContext.createOscillator();
-    const gainNode = audioContext.createGain();
-
-    oscillator1.connect(gainNode);
-    oscillator2.connect(gainNode);
-    gainNode.connect(audioContext.destination);
-
-    oscillator1.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
-    oscillator2.frequency.setValueAtTime(659.25, audioContext.currentTime); // E5
-
-    oscillator1.frequency.exponentialRampToValueAtTime(783.99, audioContext.currentTime + 0.5); // G5
-    oscillator2.frequency.exponentialRampToValueAtTime(1046.50, audioContext.currentTime + 0.5); // C6
-
-    gainNode.gain.setValueAtTime(0.08, audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.8);
-
-    oscillator1.start(audioContext.currentTime);
-    oscillator2.start(audioContext.currentTime);
-    oscillator1.stop(audioContext.currentTime + 0.8);
-    oscillator2.stop(audioContext.currentTime + 0.8);
+    // Reset and play the reveal/answer sound
+    revealSound.currentTime = 0;
+    revealSound.play().catch(err => console.log('Audio play failed:', err));
 }
 
 // ============================================
@@ -197,10 +172,9 @@ soundToggle.addEventListener('click', () => {
     isMuted = !isMuted;
     soundToggle.classList.toggle('muted', isMuted);
 
-    // Resume audio context if it was suspended (browser autoplay policy)
-    if (!isMuted && audioContext.state === 'suspended') {
-        audioContext.resume();
-    }
+    // Mute/unmute the audio elements
+    bookOpenSound.muted = isMuted;
+    revealSound.muted = isMuted;
 });
 
 // ============================================
@@ -247,13 +221,6 @@ document.addEventListener('keydown', (e) => {
 // ============================================
 function init() {
     createParticles();
-
-    // Initialize audio context on first user interaction
-    document.addEventListener('click', () => {
-        if (audioContext.state === 'suspended') {
-            audioContext.resume();
-        }
-    }, { once: true });
 
     // Add subtle parallax effect on mouse move
     document.addEventListener('mousemove', (e) => {
