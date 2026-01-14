@@ -23,7 +23,7 @@ let usedAnswers = [];
 // Audio - Using MP3 Files
 // ============================================
 const bookOpenSound = new Audio('ES_Short-Riser-Dramatic-Epidemic-Sound.mp3');
-const revealSound = new Audio('ES_Game-Jingle-Chime-Positive-02-Epidemic-Sound.mp3');
+const revealSound = new Audio('ES_Game-Jingle-Chime-Positive-02-Epidemic-Sound (mp3cut.net).mp3');
 
 // Preload audio
 bookOpenSound.preload = 'auto';
